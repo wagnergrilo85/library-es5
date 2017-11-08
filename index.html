@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Controle de livros</title>
+
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+
+    <section id="main">
+        <div class="container-fluid" id = "form-inputs">
+            <h1> Gerenciamento de livros </h1>
+            <div class="container">
+                <div class="row" id = "form-datas">
+
+                    <ul id = "erros-messages"></ul>
+
+                    <form id = "form-book">
+
+                        <div class="col-xs-12 col-sm-4 col-md-6 col-lg-3">
+                            <div class="input-group">
+                                <label for="title">Título</label>
+                                <input type="text" name="title" id = "title" class="form-control" placeholder="Título" value = "">
+                                <span class="error-message-field"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-6 col-lg-3">
+                            <div class="input-group">
+                                <label for="subject">Assunto</label>
+                                <input type="text" name="subject" id = "subject" class="form-control" placeholder="Assunto"  value = "">
+                                <span class="error-message-field"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-6 col-lg-3">
+                            <div class="input-group">
+                                <label for="pages">Número de páginas</label>
+                                <input type="int" name="pages" id = "pages" class="form-control" placeholder="Número de páginas"  value = "">
+                                <span class="error-message-field"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-4 col-md-6 col-lg-3">
+                            <div class="input-group">
+                                <label for="author">Autor</label>
+                                <input type="text" name="author" id = "author" class="form-control" placeholder="Autor"  value = "">
+                                <span class="error-message-field"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <label for="description">Descrição</label>
+                            <textarea name="description" id="description" class="form-control" rows="5"></textarea>
+                            <span class="error-message-field"></span>
+                        </div>
+
+                        <div class="clearfix"></div>
+
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id = "box-buttons">
+                            <button type="submit" class="btn btn-success" id = "btnSaveBook">Cadastrar</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id = "table-content">
+        <div class="container">
+
+            <div class="box-filer-book">
+                <input type="text" class="" id = "input-filter-book" placeholder="Pesquisar livros...">
+            </div>
+
+            <table class="table table-hover table-striped table-bordered" id = "books-table">
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Assunto</th>
+                        <th>Páginas</th>
+                        <th>Autor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id = "table-list-books">
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="container">
+        <hr>
+        Criado por <strong>Wagner Grilo de Barros Júnior </strong>
+        <br> Wagner.grilo85@gmail.com
+        <br> <a href="https://github.com/wagnergrilo85" target="_blank"> <i class="fa fa-github" aria-hidden="true"></i> github</a>
+        <a href="https://www.linkedin.com/in/wagner-grilo-de-barros-j%C3%BAnior-735b39102/" target="_blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i> linkedin</a>
+        <p>© 2017 -  Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/register-book.js"></script>
+    <script src="js/table-book.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/crud-book-table.js"></script>
+    <script src="js/form-book.js"></script>
+    <script src="js/filter-table.js"></script>
+
+</body>
+</html>
